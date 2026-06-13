@@ -1,0 +1,283 @@
+/* =================================================
+   ESOPHAGUS & STOMACH STYLES - oesophagus-stomach.css
+   ================================================= */
+
+/* Esophagus Animation */
+.esophagus-animation-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esophagus {
+    position: relative;
+    width: 60px;
+    height: 280px;
+    background: linear-gradient(90deg, #ff9999 0%, #cc7777 100%);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.food-ball {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #8B4513;
+    border-radius: 50%;
+    left: 7.5px;
+    top: 0;
+    animation: foodFall 2s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes foodFall {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 235px;
+        opacity: 0.3;
+    }
+}
+
+.peristalsis-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    animation: waveMove 2s ease-in-out infinite;
+}
+
+.wave:nth-child(1) {
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+    top: 50%;
+    animation-delay: 0.3s;
+}
+
+.wave:nth-child(3) {
+    top: 80%;
+    animation-delay: 0.6s;
+}
+
+@keyframes waveMove {
+    0% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1.5);
+        opacity: 0;
+    }
+}
+
+.esophagus-arrows {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #667eea;
+    margin: 15px 0;
+    animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+/* Stomach Animation */
+.stomach-animation-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stomach {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc3333);
+    border-radius: 60% 50% 50% 60%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: stomachChurn 2s ease-in-out infinite;
+}
+
+.stomach-wall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 60% 50% 50% 60%;
+    animation: stomachPulse 2s ease-in-out infinite;
+}
+
+@keyframes stomachChurn {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.02);
+    }
+}
+
+@keyframes stomachPulse {
+    0%, 100% {
+        border-width: 3px;
+    }
+    50% {
+        border-width: 2px;
+    }
+}
+
+.food-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.food-particle {
+    width: 25px;
+    height: 25px;
+    background: #8B4513;
+    border-radius: 50%;
+    margin: 10px;
+    animation: particleMove 2s ease-in-out infinite;
+}
+
+.food-particle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.food-particle:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.food-particle:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes particleMove {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(30px, 20px) scale(0.9);
+    }
+    50% {
+        transform: translate(-30px, 30px) scale(0.8);
+    }
+    75% {
+        transform: translate(20px, -20px) scale(0.9);
+    }
+}
+
+.juice-drops {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.juice-drop {
+    width: 8px;
+    height: 8px;
+    background: #ffff99;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: juiceFloat 1.5s ease-in-out infinite;
+    margin: 15px;
+}
+
+.juice-drop:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.juice-drop:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.juice-drop:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes juiceFloat {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate(20px, -30px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(0, 60px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .esophagus-animation-container,
+    .stomach-animation-container {
+        height: 280px;
+    }
+
+    .esophagus {
+        width: 50px;
+        height: 230px;
+    }
+
+    .food-ball {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .stomach {
+        width: 160px;
+        height: 200px;
+    }
+}

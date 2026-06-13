@@ -1,0 +1,327 @@
+/* =================================================
+   SMALL & LARGE INTESTINE STYLES - small-large-intestine.css
+   ================================================= */
+
+/* Small Intestine */
+.small-intestine-animation-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.small-intestine {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border: 3px solid #ff9999;
+    border-radius: 75px;
+    background: linear-gradient(90deg, #ffe6e6 0%, #ffcccc 100%);
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intestinal-lumen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chyme-particles {
+    display: flex;
+    gap: 20px;
+}
+
+.particle {
+    width: 15px;
+    height: 15px;
+    background: #8B4513;
+    border-radius: 50%;
+    animation: particleFlow 3s linear infinite;
+}
+
+.particle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes particleFlow {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+.villi-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.05));
+}
+
+.villus {
+    width: 20px;
+    height: 50px;
+    background: linear-gradient(to bottom, #66bb6a, #4caf50);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.villus:hover {
+    height: 60px;
+    background: linear-gradient(to bottom, #81c784, #66bb6a);
+}
+
+.microvillus {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        rgba(255, 255, 255, 0.3) 3px,
+        rgba(255, 255, 255, 0.3) 4px
+    );
+    border-radius: 10px 10px 0 0;
+}
+
+.blood-vessel {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 40px;
+    border: 2px solid #ff6b6b;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nutrient-particle {
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    animation: nutrientFlow 2s ease-in-out infinite;
+}
+
+.nutrient-particle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.nutrient-particle:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes nutrientFlow {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* Large Intestine */
+.large-intestine-animation-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.large-intestine {
+    position: relative;
+    width: 100px;
+    height: 280px;
+    background: linear-gradient(90deg, #ffb3ba 0%, #ffcc99 100%);
+    border: 3px solid #ff7f7f;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.colon-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ascending-colon {
+    height: 30%;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.transverse-colon {
+    height: 35%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.descending-colon {
+    height: 35%;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.waste-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.waste {
+    width: 15px;
+    height: 15px;
+    background: #8B4513;
+    border-radius: 3px;
+    animation: wasteMove 3s ease-in-out infinite;
+}
+
+.waste:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.waste:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.waste:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes wasteMove {
+    0% {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(140px);
+        opacity: 0;
+    }
+}
+
+.water-indicator {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.water-drop {
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+    animation: waterVanish 2s ease-in-out infinite;
+}
+
+.water-drop:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.water-drop:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.water-drop:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes waterVanish {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+}
+
+.rectum-indicator {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .small-intestine-animation-container,
+    .large-intestine-animation-container {
+        height: 280px;
+    }
+
+    .small-intestine {
+        width: 250px;
+        height: 120px;
+    }
+
+    .large-intestine {
+        width: 80px;
+        height: 230px;
+    }
+
+    .blood-vessel {
+        width: 200px;
+        bottom: -25px;
+    }
+
+    .water-indicator {
+        right: -50px;
+    }
+
+    .rectum-indicator {
+        bottom: -30px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 2 & 3: Esophagus & Stomach - Digestive System</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/oesophagus-stomach.css">
+</head>
+<body>
+    <div class="simulator-container">
+        <!-- Header -->
+        <header class="sim-header">
+            <a href="../index.html" class="home-link">🏠 Home</a>
+            <h1>Stage 2-3: Esophagus & Stomach 🔻🫙</h1>
+            <div class="controls">
+                <button id="musicToggle" class="control-btn">🔊 Music</button>
+                <button id="sfxToggle" class="control-btn">🔔 SFX</button>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 50%;"></div>
+            </div>
+            <p class="progress-text">Stage 2-3/5 - 50% Complete</p>
+        </div>
+
+        <!-- Stage Tabs -->
+        <div class="stage-tabs">
+            <button class="tab-btn active" onclick="showStage(2)">Stage 2: Esophagus</button>
+            <button class="tab-btn" onclick="showStage(3)">Stage 3: Stomach</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="stage-content">
+            <!-- STAGE 2: ESOPHAGUS -->
+            <div id="stage2" class="stage-panel active">
+                <div class="stage-visual">
+                    <div class="esophagus-animation-container">
+                        <div class="esophagus">
+                            <div class="food-ball" id="foodBall">🍡</div>
+                            <div class="peristalsis-waves">
+                                <div class="wave"></div>
+                                <div class="wave"></div>
+                                <div class="wave"></div>
+                            </div>
+                        </div>
+                        <div class="esophagus-arrows">
+                            <div class="arrow down"></div>
+                            <div class="arrow down"></div>
+                            <div class="arrow down"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educational-content">
+                    <h2>Stage 2: The Esophagus - Food Travels Down 🔻</h2>
+                    
+                    <div class="info-section">
+                        <h3>What is the Esophagus?</h3>
+                        <p>
+                            The <strong>esophagus</strong> is a muscular tube about 10 inches (25 cm) long 
+                            that connects your mouth to your stomach. It's like a food chute!
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Peristalsis: The Wave Motion</h3>
+                        <p>
+                            Your chewed food (bolus) travels down the esophagus in about 5-8 seconds using a wave-like motion 
+                            called <strong>peristalsis</strong>. The muscles in the esophagus walls squeeze in sequence, 
+                            pushing the food downward - just like squeezing a tube of toothpaste from top to bottom!
+                        </p>
+                        <p>
+                            <strong>Amazing fact:</strong> Peristalsis is so powerful that you could eat while standing on your head!
+                        </p>
+                    </div>
+
+                    <div class="fun-fact-box">
+                        <h3>💡 Fun Facts:</h3>
+                        <ul>
+                            <li>The esophagus is completely smooth on the inside</li>
+                            <li>A special valve (lower esophageal sphincter) prevents food from going back up</li>
+                            <li>Peristalsis also happens in your stomach and intestines</li>
+                            <li>No digestion happens in the esophagus - it just transports food</li>
+                        </ul>
+                    </div>
+
+            <!-- STAGE 3: STOMACH -->
+            <div id="stage3" class="stage-panel">
+                <div class="stage-visual">
+                    <div class="stomach-animation-container">
+                        <div class="stomach">
+                            <div class="stomach-wall" id="stomachWall"></div>
+                            <div class="food-content" id="foodContent">
+                                <div class="food-particle"></div>
+                                <div class="food-particle"></div>
+                                <div class="food-particle"></div>
+                            </div>
+                            <div class="juice-drops" id="juiceDrops">
+                                <div class="juice-drop"></div>
+                                <div class="juice-drop"></div>
+                                <div class="juice-drop"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educational-content">
+                    <h2>Stage 3: The Stomach - Breaking Down Food 🫙</h2>
+                    
+                    <div class="info-section">
+                        <h3>What Does the Stomach Do?</h3>
+                        <p>
+                            Your <strong>stomach</strong> is a muscular, J-shaped organ that stores and breaks down food. 
+                            It's much more than just a storage tank - it's a powerful mixing machine!
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Mechanical Digestion: Churning</h3>
+                        <p>
+                            The stomach's muscular walls <strong>churn</strong> and squeeze, mixing the food into tiny pieces. 
+                            This churning motion breaks down food physically into even smaller pieces.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Chemical Digestion: Gastric Juices</h3>
+                        <p>
+                            Your stomach also releases <strong>gastric juice</strong> containing:
+                        </p>
+                        <ul>
+                            <li><strong>Hydrochloric acid (HCl):</strong> Breaks down proteins and kills harmful bacteria</li>
+                            <li><strong>Pepsin:</strong> An enzyme that breaks down proteins into smaller pieces</li>
+                            <li><strong>Mucus:</strong> Protects the stomach lining from the acid</li>
+                        </ul>
+                        <p>
+                            After 2-4 hours of churning and mixing, the food becomes a thick, soupy mixture called <strong>chyme</strong>.
+                        </p>
+                    </div>
+
+                    <div class="fun-fact-box">
+                        <h3>💡 Fun Facts About Your Stomach:</h3>
+                        <ul>
+                            <li>Your stomach is about the size of your fist when empty, but can hold up to 4 liters of food!</li>
+                            <li>The stomach produces a new lining every 3-5 days so it doesn't digest itself</li>
+                            <li>Your stomach produces 1-3 liters of gastric juice daily</li>
+                            <li>The stomach is very muscular - it can produce 20,000 contractions per day</li>
+                            <li>Different foods stay in your stomach for different amounts of time</li>
+                        </ul>
+                    </div>
+
+                    <div class="key-terms">
+                        <h3>📖 Key Terms:</h3>
+                        <div class="term-card">
+                            <strong>Chyme:</strong> The soupy mixture of food and gastric juices
+                        </div>
+                        <div class="term-card">
+                            <strong>Pepsin:</strong> An enzyme that breaks down proteins
+                        </div>
+                        <div class="term-card">
+                            <strong>Gastric Juice:</strong> The stomach's digestive secretion
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <a href="mouth.html" class="btn btn-secondary">⬅️ Previous</a>
+            <a href="liver-pancreas.html" class="btn btn-primary">Next Stage ➡️</a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="sim-footer">
+            <p>🎓 Grade 7 Educational Content | Digestion in Action!</p>
+        </footer>
+    </div>
+
+    <script src="../JS/oesophagus.js"></script>
+</body>
+</html>

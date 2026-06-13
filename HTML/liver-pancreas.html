@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 4 Helpers: Liver & Pancreas - Digestive System</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/liver-pancreas.css">
+</head>
+<body>
+    <div class="simulator-container">
+        <!-- Header -->
+        <header class="sim-header">
+            <a href="../index.html" class="home-link">🏠 Home</a>
+            <h1>Stage 4 Helpers: Liver & Pancreas 🫘🔴</h1>
+            <div class="controls">
+                <button id="musicToggle" class="control-btn">🔊 Music</button>
+                <button id="sfxToggle" class="control-btn">🔔 SFX</button>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 75%;"></div>
+            </div>
+            <p class="progress-text">Stage 4 Helpers/5 - 75% Complete</p>
+        </div>
+
+        <!-- Stage Tabs -->
+        <div class="stage-tabs">
+            <button class="tab-btn active" onclick="showStage('liver')">Liver</button>
+            <button class="tab-btn" onclick="showStage('pancreas')">Pancreas</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="stage-content">
+            <!-- LIVER STAGE -->
+            <div id="liver" class="stage-panel active">
+                <div class="stage-visual">
+                    <div class="liver-animation-container">
+                        <div class="liver-organ">
+                            <div class="liver-body"></div>
+                            <div class="gallbladder"></div>
+                            <div class="bile-ducts"></div>
+                            <div class="bile-animation" id="bileAnimation">
+                                <div class="bile-particle"></div>
+                                <div class="bile-particle"></div>
+                                <div class="bile-particle"></div>
+                            </div>
+                            <div class="fat-droplets">
+                                <div class="fat-drop"></div>
+                                <div class="fat-drop"></div>
+                                <div class="fat-drop"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educational-content">
+                    <h2>The Liver - Your Body's Chemical Factory 🫘</h2>
+                    
+                    <div class="info-section">
+                        <h3>What is the Liver?</h3>
+                        <p>
+                            Your <strong>liver</strong> is the largest internal organ in your body (about the size of a football!). 
+                            It has over 500 different functions, and many of them involve digestion.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>The Liver's Role in Digestion</h3>
+                        <p>
+                            The liver produces <strong>bile</strong>, a yellow-green fluid that helps break down <strong>fats</strong>. 
+                            When you eat fatty foods, bile is released and breaks fats into smaller droplets 
+                            (a process called <strong>emulsification</strong>). This makes it easier for enzymes to digest fats.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Bile Storage: The Gallbladder</h3>
+                        <p>
+                            Bile is produced by the liver and stored in the <strong>gallbladder</strong> 
+                            (a small pouch attached to the liver). When you eat, especially fatty foods, 
+                            the gallbladder contracts and releases bile into the small intestine.
+                        </p>
+                    </div>
+
+                    <div class="fun-fact-box">
+                        <h3>💡 Fun Facts About Your Liver:</h3>
+                        <ul>
+                            <li>Your liver produces about 1-2 liters of bile every day!</li>
+                            <li>The liver removes toxins from your blood (detoxification)</li>
+                            <li>The liver stores glucose (blood sugar) for energy</li>
+                            <li>The liver makes proteins needed by your body</li>
+                            <li>Bile is what gives poop its brown color (along with dead blood cells)</li>
+                            <li>Your liver can regenerate if part of it is damaged!</li>
+                            <li>The liver receives blood from both the stomach/intestines AND the heart</li>
+                        </ul>
+                    </div>
+
+                    <div class="key-terms">
+                        <h3>📖 Key Terms:</h3>
+                        <div class="term-card">
+                            <strong>Bile:</strong> A fluid produced by the liver that breaks down fats
+                        </div>
+                        <div class="term-card">
+                            <strong>Gallbladder:</strong> Stores and releases bile when needed
+                        </div>
+                        <div class="term-card">
+                            <strong>Emulsification:</strong> Breaking fats into smaller droplets
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANCREAS STAGE -->
+            <div id="pancreas" class="stage-panel">
+                <div class="stage-visual">
+                    <div class="pancreas-animation-container">
+                        <div class="pancreas-organ">
+                            <div class="pancreas-body"></div>
+                            <div class="enzyme-production" id="enzymeProduction">
+                                <div class="enzyme-bubble"></div>
+                                <div class="enzyme-bubble"></div>
+                                <div class="enzyme-bubble"></div>
+                            </div>
+                            <div class="hormone-particles">
+                                <div class="hormone-particle">I</div>
+                                <div class="hormone-particle">G</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educational-content">
+                    <h2>The Pancreas - Your Enzyme Factory 🔴</h2>
+                    
+                    <div class="info-section">
+                        <h3>What is the Pancreas?</h3>
+                        <p>
+                            Your <strong>pancreas</strong> is a long, thin organ that sits behind your stomach. 
+                            It has two main jobs: one for digestion and one for regulating blood sugar.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>The Pancreas' Role in Digestion</h3>
+                        <p>
+                            The pancreas produces <strong>pancreatic juice</strong> containing powerful enzymes that break down:
+                        </p>
+                        <ul>
+                            <li><strong>Carbohydrates →</strong> Pancreatic amylase breaks down starches</li>
+                            <li><strong>Proteins →</strong> Proteases break down proteins</li>
+                            <li><strong>Fats →</strong> Lipase breaks down fats</li>
+                        </ul>
+                        <p>
+                            These enzymes are released into the small intestine where they continue breaking down food 
+                            alongside the bile from the liver.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Regulating Blood Sugar</h3>
+                        <p>
+                            The pancreas also produces two important hormones:
+                        </p>
+                        <ul>
+                            <li><strong>Insulin:</strong> Helps your cells take in glucose (blood sugar) for energy</li>
+                            <li><strong>Glucagon:</strong> Raises blood sugar when it gets too low</li>
+                        </ul>
+                        <p>
+                            These hormones are released into your bloodstream to control your blood sugar levels throughout the day.
+                        </p>
+                    </div>
+
+                    <div class="fun-fact-box">
+                        <h3>💡 Fun Facts About Your Pancreas:</h3>
+                        <ul>
+                            <li>Your pancreas is about 6 inches (15 cm) long</li>
+                            <li>The pancreas produces about 1-2 liters of pancreatic juice every day</li>
+                            <li>Pancreatic enzymes are the most powerful digestive enzymes in your body</li>
+                            <li>About 99% of the pancreas is involved in digestion; only 1% produces hormones</li>
+                            <li>If the pancreas doesn't produce enough insulin, a person has diabetes</li>
+                            <li>The pancreas is sometimes called the "workhorse" of digestion</li>
+                        </ul>
+                    </div>
+
+                    <div class="key-terms">
+                        <h3>📖 Key Terms:</h3>
+                        <div class="term-card">
+                            <strong>Pancreatic Juice:</strong> Contains enzymes for breaking down all food types
+                        </div>
+                        <div class="term-card">
+                            <strong>Insulin:</strong> A hormone that helps cells use glucose
+                        </div>
+                        <div class="term-card">
+                            <strong>Glucagon:</strong> A hormone that raises blood sugar levels
+                        </div>
+                        <div class="term-card">
+                            <strong>Diabetes:</strong> A condition where blood sugar isn't controlled properly
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <a href="oesophagus-stomach.html" class="btn btn-secondary">⬅️ Previous</a>
+            <a href="small-large-intestine.html" class="btn btn-primary">Next Stage ➡️</a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="sim-footer">
+            <p>🎓 Grade 7 Educational Content | The Digestive System Helpers!</p>
+        </footer>
+    </div>
+
+    <script src="../JS/liver-pancreas.js"></script>
+</body>
+</html>

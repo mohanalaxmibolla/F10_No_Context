@@ -1,0 +1,193 @@
+/* Realistic mouth animation - Stage 1 */
+.clean-header { justify-content: space-between; }
+.clean-header h1 { text-align: center; }
+
+.mouth-scene {
+    width: 100%;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.face-card {
+    width: 340px;
+    height: 330px;
+    background: radial-gradient(circle at 50% 25%, #ffd6bd 0%, #efaa82 70%);
+    border-radius: 48% 48% 42% 42%;
+    position: relative;
+    box-shadow: inset 0 -18px 30px rgba(160, 70, 42, 0.16), 0 18px 35px rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.face-top {
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.eye {
+    width: 18px;
+    height: 18px;
+    background: #2e211f;
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 0 rgba(255,255,255,0.35);
+}
+
+.nose {
+    width: 26px;
+    height: 42px;
+    border-radius: 45%;
+    background: linear-gradient(#efb08e, #d98c68);
+    box-shadow: 0 4px 8px rgba(120,60,40,0.18);
+}
+
+.mouth-window {
+    position: absolute;
+    left: 50%;
+    bottom: 54px;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 125px;
+}
+
+.upper-lip, .lower-lip {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 42px;
+    background: linear-gradient(90deg, #bf5664, #e98691, #bf5664);
+    z-index: 5;
+    box-shadow: 0 5px 10px rgba(92,20,38,0.22);
+}
+
+.upper-lip {
+    top: 0;
+    border-radius: 52% 52% 42% 42%;
+    animation: upperChew 1.1s ease-in-out infinite;
+}
+
+.lower-lip {
+    bottom: 0;
+    border-radius: 42% 42% 55% 55%;
+    animation: lowerChew 1.1s ease-in-out infinite;
+}
+
+.mouth-cavity {
+    position: absolute;
+    left: 50%;
+    top: 29px;
+    transform: translateX(-50%);
+    width: 208px;
+    height: 77px;
+    background: radial-gradient(circle at 50% 78%, #8d2334 0%, #4b101e 72%);
+    border-radius: 14px 14px 70px 70px;
+    overflow: hidden;
+    box-shadow: inset 0 8px 18px rgba(0,0,0,0.65);
+    animation: cavityChew 1.1s ease-in-out infinite;
+}
+
+.teeth {
+    position: absolute;
+    left: 14px;
+    width: 180px;
+    height: 21px;
+    background: repeating-linear-gradient(90deg, #fff8ea 0 20px, #dfd7c5 20px 22px);
+    z-index: 4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.teeth-upper { top: 0; border-radius: 0 0 10px 10px; }
+.teeth-lower { bottom: 0; border-radius: 10px 10px 0 0; }
+
+.tongue {
+    position: absolute;
+    left: 42px;
+    bottom: -9px;
+    width: 125px;
+    height: 44px;
+    background: linear-gradient(#f18ba1, #c74765);
+    border-radius: 55% 55% 0 0;
+    z-index: 2;
+    animation: tongueMove 1.7s ease-in-out infinite;
+}
+
+.food-bolus {
+    position: absolute;
+    left: 86px;
+    top: 28px;
+    width: 42px;
+    height: 33px;
+    z-index: 3;
+    animation: bolusChew 1.1s ease-in-out infinite;
+}
+
+.food-bolus span {
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    background: linear-gradient(#f2c25b, #b96b24);
+    border-radius: 48%;
+    box-shadow: inset -2px -2px 0 rgba(100,50,20,0.22);
+}
+.food-bolus span:nth-child(1){ left: 2px; top: 5px; }
+.food-bolus span:nth-child(2){ left: 17px; top: 1px; }
+.food-bolus span:nth-child(3){ left: 24px; top: 16px; }
+.food-bolus span:nth-child(4){ left: 8px; top: 19px; }
+
+.saliva-flow {
+    position: absolute;
+    width: 8px;
+    height: 28px;
+    background: rgba(185, 235, 255, 0.72);
+    border-radius: 50%;
+    z-index: 3;
+    filter: blur(0.2px);
+    animation: salivaDrip 1.3s linear infinite;
+}
+.saliva-one { left: 55px; top: 10px; }
+.saliva-two { right: 53px; top: 6px; animation-delay: 0.45s; }
+
+.enzyme {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(118, 226, 255, 0.92);
+    z-index: 4;
+    box-shadow: 0 0 10px rgba(118,226,255,0.95);
+    animation: enzymeFloat 2s ease-in-out infinite;
+}
+.enzyme-a { left: 54px; top: 44px; }
+.enzyme-b { left: 142px; top: 38px; animation-delay: .4s; }
+.enzyme-c { left: 108px; top: 21px; animation-delay: .8s; }
+
+.animation-label {
+    max-width: 520px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #fff3cd;
+    color: #664d03;
+    font-weight: 600;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+@keyframes upperChew { 0%,100%{ transform: translate(-50%,0); } 50%{ transform: translate(-50%,12px); } }
+@keyframes lowerChew { 0%,100%{ transform: translate(-50%,0); } 50%{ transform: translate(-50%,-11px); } }
+@keyframes cavityChew { 0%,100%{ height:77px; } 50%{ height:52px; top:42px; } }
+@keyframes tongueMove { 0%,100%{ transform: translateX(0) scaleX(1); } 50%{ transform: translateX(12px) scaleX(0.92); } }
+@keyframes bolusChew { 0%,100%{ transform: translate(0,0) rotate(0deg) scale(1); } 50%{ transform: translate(-8px,5px) rotate(22deg) scale(.72); } }
+@keyframes salivaDrip { 0%{ opacity:0; transform: translateY(-12px) scaleY(.5); } 35%{ opacity:1; } 100%{ opacity:0; transform: translateY(35px) scaleY(1.25); } }
+@keyframes enzymeFloat { 0%,100%{ transform: translate(0,0); opacity:.35; } 50%{ transform: translate(12px,8px); opacity:1; } }
+
+@media (max-width: 480px) {
+    .face-card { width: 285px; height: 295px; }
+    .mouth-window { transform: translateX(-50%) scale(.86); bottom: 42px; }
+}

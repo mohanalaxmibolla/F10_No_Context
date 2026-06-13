@@ -1,0 +1,301 @@
+/* =================================================
+   LIVER & PANCREAS STYLES - liver-pancreas.css
+   ================================================= */
+
+/* Liver Animation */
+.liver-animation-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.liver-organ {
+    position: relative;
+    width: 250px;
+    height: 200px;
+}
+
+.liver-body {
+    position: absolute;
+    width: 220px;
+    height: 180px;
+    background: radial-gradient(circle at 30% 30%, #ff9999, #cc6666);
+    border-radius: 60% 50% 40% 50%;
+    left: 15px;
+    top: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallbladder {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #ffff99, #cccc66);
+    border-radius: 50%;
+    right: 30px;
+    bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #cccc00;
+}
+
+.bile-ducts {
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffff99, transparent);
+    left: 90px;
+    top: 100px;
+    animation: bileFlow 2s ease-in-out infinite;
+}
+
+.bile-animation {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 90px;
+    top: 85px;
+}
+
+.bile-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffff99;
+    border-radius: 50%;
+    animation: bileMove 2s ease-in-out infinite;
+}
+
+.bile-particle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.bile-particle:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.bile-particle:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes bileMove {
+    0% {
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        left: 130px;
+        top: 20px;
+        opacity: 0;
+    }
+}
+
+@keyframes bileFlow {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.fat-droplets {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fat-drop {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle at 30% 30%, #ffff99, #ffff66);
+    border-radius: 50%;
+    animation: fatEmulsify 2s ease-in-out infinite;
+}
+
+.fat-drop:nth-child(1) {
+    animation-delay: 0s;
+    left: 50px;
+}
+
+.fat-drop:nth-child(2) {
+    animation-delay: 0.3s;
+    left: 100px;
+}
+
+.fat-drop:nth-child(3) {
+    animation-delay: 0.6s;
+    left: 150px;
+}
+
+@keyframes fatEmulsify {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+}
+
+/* Pancreas Animation */
+.pancreas-animation-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pancreas-organ {
+    position: relative;
+    width: 280px;
+    height: 120px;
+}
+
+.pancreas-body {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    background: linear-gradient(90deg, #ff9999 0%, #ffb3b3 50%, #ff6666 100%);
+    border-radius: 50%;
+    left: 15px;
+    top: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.enzyme-production {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    left: 15px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.enzyme-bubble {
+    width: 20px;
+    height: 20px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    animation: enzymeRelease 2s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.enzyme-bubble:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.enzyme-bubble:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.enzyme-bubble:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes enzymeRelease {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-60px) scale(0.7);
+        opacity: 0;
+    }
+}
+
+.hormone-particles {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+.hormone-particle {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    animation: hormoneFlow 3s ease-in-out infinite;
+}
+
+.hormone-particle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hormone-particle:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes hormoneFlow {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-100px) scale(0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .liver-animation-container,
+    .pancreas-animation-container {
+        height: 280px;
+    }
+
+    .liver-organ {
+        width: 200px;
+        height: 160px;
+    }
+
+    .liver-body {
+        width: 180px;
+        height: 150px;
+    }
+
+    .pancreas-organ {
+        width: 240px;
+        height: 100px;
+    }
+
+    .pancreas-body {
+        width: 210px;
+        height: 80px;
+    }
+
+    .bile-ducts {
+        width: 120px;
+        left: 70px;
+    }
+
+    .bile-animation {
+        width: 120px;
+        left: 70px;
+    }
+}

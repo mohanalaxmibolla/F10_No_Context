@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 4: Small & Large Intestines - Digestive System</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/small-large-intestine.css">
+</head>
+<body>
+    <div class="simulator-container">
+        <!-- Header -->
+        <header class="sim-header">
+            <a href="../index.html" class="home-link">🏠 Home</a>
+            <h1>Stage 4-5: Small & Large Intestines 🌊🚀</h1>
+            <div class="controls">
+                <button id="musicToggle" class="control-btn">🔊 Music</button>
+                <button id="sfxToggle" class="control-btn">🔔 SFX</button>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 100%;"></div>
+            </div>
+            <p class="progress-text">Stage 4-5/5 - 100% Complete!</p>
+        </div>
+
+        <!-- Stage Tabs -->
+        <div class="stage-tabs">
+            <button class="tab-btn active" onclick="showStage(4)">Stage 4: Small Intestine</button>
+            <button class="tab-btn" onclick="showStage(5)">Stage 5: Large Intestine</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="stage-content">
+            <!-- STAGE 4: SMALL INTESTINE -->
+            <div id="stage4" class="stage-panel active">
+                <div class="stage-visual">
+                    <div class="small-intestine-animation-container">
+                        <div class="small-intestine">
+                            <div class="intestinal-lumen" id="lumen">
+                                <div class="chyme-particles">
+                                    <div class="particle"></div>
+                                    <div class="particle"></div>
+                                    <div class="particle"></div>
+                                </div>
+                            </div>
+                            <div class="villi-section">
+                                <div class="villus" onclick="showVillusInfo()">
+                                    <div class="microvillus"></div>
+                                </div>
+                                <div class="villus" onclick="showVillusInfo()">
+                                    <div class="microvillus"></div>
+                                </div>
+                                <div class="villus" onclick="showVillusInfo()">
+                                    <div class="microvillus"></div>
+                                </div>
+                                <div class="villus" onclick="showVillusInfo()">
+                                    <div class="microvillus"></div>
+                                </div>
+                            </div>
+                            <div class="blood-vessel" id="bloodVessel">
+                                <div class="nutrient-particle"></div>
+                                <div class="nutrient-particle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educational-content">
+                    <h2>Stage 4: The Small Intestine - Nutrient Absorption 🌊</h2>
+                    
+                    <div class="info-section">
+                        <h3>The Small Intestine</h3>
+                        <p>
+                            Despite its name, your <strong>small intestine</strong> is actually very long - about 20 feet (6 meters)! 
+                            It's called "small" because of its narrow diameter. This is where <strong>most nutrient absorption</strong> happens.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Villi: Tiny Absorption Fingers</h3>
+                        <p>
+                            The inside of your small intestine is lined with millions of tiny finger-like structures called <strong>villi</strong>. 
+                            Each villus has even tinier structures called <strong>microvilli</strong>. This creates an enormous surface area for absorbing nutrients!
+                        </p>
+                        <p>
+                            <strong>Compare:</strong> If the small intestine were flat, its surface would only be about the size of a piece of paper. 
+                            With villi and microvilli, it has the surface area of a tennis court!
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>What Gets Absorbed?</h3>
+                        <p>Nutrients absorbed in the small intestine include:</p>
+                        <ul>
+                            <li><strong>Carbohydrates →</strong> Provide quick energy for your body</li>
+                            <li><strong>Proteins →</strong> Build and repair muscles and tissues</li>
+                            <li><strong>Fats →</strong> Store long-term energy and support brain function</li>
+                            <li><strong>Vitamins →</strong> Support various body functions</li>
+                            <li><strong>Minerals →</strong> Build bones and teeth, regulate body functions</li>
+                            <li><strong>Water →</strong> Keep your body hydrated</li>
+                        </ul>
+                    </div>
+
+                    <div class="fun-fact-box">
+                        <h3>💡 Fun Facts About Your Small Intestine:</h3>
+                        <ul>
+                            <li>The small intestine has 10-40 villi per millimeter squared</li>
+                            <li>Each villi has 1,000-1,600 microvilli</li>
+                            <li>Total surface area of villi: about 250-400 square meters (the size of a tennis court!)</li>
+                            <li>Food spends 3-5 hours in the small intestine</li>
+                            <li>The small intestine receives help from the liver and pancreas (see the previous stage)</li>
+                        </ul>
+                    </div>
+
+                    <p class="interaction-hint">💡 Click on a villus to learn more about nutrient absorption!</p>
+
+                    <!-- Info Box for Villi -->
+                    <div id="villusInfo" class="info-box hidden">
+                        <h4>How Villi Absorb Nutrients 🔬</h4>
+                        <p>
+                            Villi are covered with a single layer of cells that allow nutrients to pass through into the blood. 
+                            Inside each villus are capillaries (tiny blood vessels) that carry absorbed nutrients throughout your body. 
+                            The nutrients are then transported to your cells where they're used for energy, growth, and repair!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 5: LARGE INTESTINE -->
+            <div id="stage5" class="stage-panel">
+                <div class="stage-visual">
+                    <div class="large-intestine-animation-container">
+                        <div class="large-intestine">
+                            <div class="colon-section">
+                                <div class="ascending-colon"></div>
+                                <div class="transverse-colon"></div>
+                                <div class="descending-colon"></div>
+                            </div>
+                            <div class="waste-particles" id="wasteParticles">
+                                <div class="waste"></div>
+                                <div class="waste"></div>
+                                <div class="waste"></div>
+                            </div>
+                            <div class="water-indicator">
+                                <div class="water-drop">💧</div>
+                                <div class="water-drop">💧</div>
+                                <div class="water-drop">💧</div>
+                            </div>
+                            <div class="rectum-indicator">📍 Rectum</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="educational-content">
+                    <h2>Stage 5: The Large Intestine - Waste Removal 🚀</h2>
+                    
+                    <div class="info-section">
+                        <h3>The Large Intestine (Colon)</h3>
+                        <p>
+                            The <strong>large intestine</strong> (also called the <strong>colon</strong>) is shorter but wider than the small intestine. 
+                            It's about 5 feet (1.5 meters) long. This is where the final stage of digestion happens!
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Water Absorption</h3>
+                        <p>
+                            The main job of the large intestine is to <strong>absorb water</strong> from the remaining food material 
+                            (called chyme or waste). As water is absorbed, the material becomes more solid, forming <strong>stool</strong> (feces). 
+                            This process takes about 8-12 hours, and the material moves slowly through the colon.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Other Functions</h3>
+                        <ul>
+                            <li><strong>Bacteria:</strong> Your large intestine contains helpful bacteria that produce vitamins (especially B vitamins)</li>
+                            <li><strong>Mineral Absorption:</strong> Some minerals like sodium are also absorbed</li>
+                            <li><strong>Stool Formation:</strong> Water is removed, creating solid waste</li>
+                            <li><strong>Storage:</strong> Stool is stored in the rectum until you use the bathroom</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>The End of the Journey</h3>
+                        <p>
+                            Finally, the stool moves into the <strong>rectum</strong> and then exits your body through the <strong>anus</strong> 
+                            during a bowel movement. The entire digestive process takes about 24-72 hours from the time you eat food 
+                            to when it leaves your body!
+                        </p>
+                    </div>
+
+                    <div class="fun-fact-box">
+                        <h3>💡 Fun Facts About Your Large Intestine:</h3>
+                        <ul>
+                            <li>Your large intestine is home to trillions of helpful bacteria (called the microbiome)</li>
+                            <li>These bacteria make up about 1-2% of your body weight!</li>
+                            <li>The large intestine absorbs about 1.5 liters of water per day</li>
+                            <li>Average stool is 75% water and 25% solid material</li>
+                            <li>Bacterial fermentation in the large intestine produces gas (which you pass)</li>
+                            <li>Your large intestine is 6 times wider than your small intestine</li>
+                        </ul>
+                    </div>
+
+                    <!-- Completion Message -->
+                    <div class="completion-box">
+                        <h3>🎉 Congratulations! 🎉</h3>
+                        <p>You've completed the digestive system journey! You now understand:</p>
+                        <ul>
+                            <li>✅ How your mouth starts digestion</li>
+                            <li>✅ How food travels through your esophagus</li>
+                            <li>✅ How your stomach breaks down food</li>
+                            <li>✅ How your small intestine absorbs nutrients</li>
+                            <li>✅ How your large intestine removes waste</li>
+                        </ul>
+                        <p><strong>Your digestive system is amazing! 🌟</strong></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <a href="oesophagus-stomach.html" class="btn btn-secondary">⬅️ Previous</a>
+            <a href="quiz.html" class="btn btn-primary">📝 Take Quiz ➡️</a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="sim-footer">
+            <p>🎓 Grade 7 Educational Content | You've Completed the Simulation!</p>
+        </footer>
+    </div>
+
+    <script src="../JS/intestine.js"></script>
+</body>
+</html>
